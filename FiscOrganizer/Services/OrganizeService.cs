@@ -60,7 +60,7 @@ public class OrganizeService : IOrganizeService
             .ThenBy(t => t.Cnpj)
             .ThenByDescending(t => t.DataFinal)
             .Distinct(new ProcessedFileModelCnpjBaseComparer())
-            .ToDictionary(k => k.CnpjBase!, e => $"{Regex.Replace(e.RazaoSocial!, @"[\\/:*?""<>|]", "")} - {e.Cnpj}");
+            .ToDictionary(k => k.CnpjBase!, e => $"{Regex.Replace(e.RazaoSocial!, @"[\\/:*?""<>|]", "")} - {e.CnpjBase}");
 
         var groupedFiles = identifiedFiles
             .GroupBy(c => new { c.SpedFileType, c.Cnpj, c.DataInicial })
