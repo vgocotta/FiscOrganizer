@@ -1,111 +1,41 @@
-FiscOrganizer
+# FiscOrganizer
 
-FiscOrganizer
-Windows desktop utility (WinForms, .NET 9) to organize Brazilian SPED files by company, period, and finality.
+A high-performance file management tool built with **.NET 9** designed to automate the organization of Brazilian Digital Tax Bookkeeping (SPED) files.
 
-It recognizes EFD ICMS IPI, EFD Contribuições, ECD, and ECF files, optionally renames them in a standard pattern, moves them into a clean folder structure, and logs all actions.
-UI messages are in Portuguese (pt-BR).
+## 🚀 The Problem
+In Brazil, companies are required to submit extensive digital tax reports (SPED) in text format. When auditors or accountants retrieve these historical files from government servers (Receitanet BX), they are often downloaded in bulk into a single, chaotic directory without meaningful naming conventions.
 
-✨ Features
+For a tax revision firm, manually sorting hundreds of these files by company, date, and report type is error-prone and time-consuming.
 
-Detects SPED file type by reading the first line (pipe-delimited) and locating the first CNPJ field.
+## 💡 The Solution
+**FiscOrganizer** acts as a specialized ETL (Extract, Transform, Load) tool for the local file system. It:
+1.  **Scans** a target directory for raw tax files.
+2.  **Parses** the content (headers) of each file to extract metadata (CNPJ/Tax ID, Reporting Period, File Type).
+3.  **Restructures** the files into a clean, hierarchical folder tree based on the extracted metadata.
 
-Supports:
+## 🛠 Tech Stack
+* **Core:** .NET 9 (C# 12)
+* **UI:** Windows Forms (Modernized)
+* **Concepts:**
+    * Asynchronous File I/O
+    * Text Parsing & Regex
+    * FileSystem Manipulation
 
-EFD ICMS IPI
+## ✨ Key Features
+* **Metadata Extraction:** Reads specific structural fields within standard SPED text files (EFD ICMS/IPI, EFD Contribuições, ECD, ECF) to identify the file owner and context.
+* **Smart Organization:** Automatically moves and renames files creating a structure like: `root/{Company_Name}/{Year}/{Report_Type}/file.txt`.
+* **Legacy Support, Modern Core:** While the UI uses the robust Windows Forms, the underlying logic runs on the latest .NET 9 runtime for maximum performance.
 
-EFD Contribuições (.txt, moves matching .rec if present)
+## 📦 How to Run
+1.  Clone this repository.
+2.  Open the solution in Visual Studio 2022.
+3.  Ensure you have the **.NET 9 SDK** installed.
+4.  Build and Run.
 
-ECD
+## 🚧 Roadmap & Future Improvements
+* [ ] Implementation of Unit Tests for the file parser logic.
+* [ ] Separation of the Core Logic into a standalone Class Library (DLL) or CLI tool.
+* [ ] Add support for zipped files.
 
-ECF
-
-Organizes into per-company folders named Razão Social - CNPJ.
-
-Per-type subfolders; EFD ICMS IPI additionally nests a CNPJ subfolder.
-
-Optional renaming pattern:
-
-TYPE - CNPJ - yyyyMMdd - yyyyMMdd - FINALITY - N.txt
-
-
-Option to separate rectified files into a RETIFICADOS subfolder.
-
-Option to move unidentified files to an ERROS folder.
-
-Real-time log panel with detailed operations.
-
-📁 Folder Structure (example)
-<DESTINATION>/Razao Social - 12345678000199/EFD CONTRIBUIÇÕES/(files...)
-└── RETIFICADOS/(rectified files...)
-
-<DESTINATION>/Razao Social - 12345678000199/EFD ICMS IPI/12345678000199/(files...)
-<DESTINATION>/Razao Social - 12345678000199/ECD/(files...)
-<DESTINATION>/Razao Social - 12345678000199/ECF/(files...)
-<DESTINATION>/ERROS/(unidentified .txt files, if enabled)
-
-
-If a .rec file exists for EFD Contribuições (same base name), it is moved alongside the .txt.
-
-⚙️ Requirements
-
-Windows 10/11
-
-.NET 9 SDK
-
-Visual Studio 2022 (latest) or dotnet CLI
-
-🚀 Getting Started
-Visual Studio
-
-Open the solution
-
-Set FiscOrganizer as the startup project
-
-Build and run
-
-CLI
-dotnet build
-dotnet run --project FiscOrganizer
-
-🖱️ Usage
-
-Select individual files (.txt) or choose a folder to scan recursively.
-
-Choose the destination folder.
-
-Options:
-
-Rename files
-
-Move unidentified files to ERROS
-
-Separate rectified files into RETIFICADOS
-
-Click “Organize” and follow the log panel.
-
-⚠️ Note: The application moves files. Work on copies or backups when necessary.
-
-🔍 How Recognition Works (summary)
-
-Reads the first line of each file (expects | separated fields).
-
-Locates the first CNPJ field index and maps it to a specific SPED processor.
-
-Extracts CNPJ, Razão Social, period start/end dates, and finality (Original/Retificadora).
-
-Unrecognized files are treated as ERROS (optional move).
-
-🤝 Contributing
-
-Issues and pull requests are welcome.
-When reporting recognition issues, include:
-
-Sample file names (sanitize sensitive data)
-
-The first line of affected SPED files
-
-⚠️ Disclaimer
-
-This tool organizes files; it does not validate SPED content or compliance.
-Use at your own discretion.
+---
+*Built by [Vitor Cotta](https://github.com/vgocotta)*
