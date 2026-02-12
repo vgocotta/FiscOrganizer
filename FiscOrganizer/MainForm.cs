@@ -1,5 +1,6 @@
-using FiscOrganizer.Contracts;
-using FiscOrganizer.Models;
+using FiscOrganizer.Core.Contracts;
+using FiscOrganizer.Core.CustomEventArgs;
+using FiscOrganizer.Core.Models;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -108,7 +109,7 @@ public partial class MainForm : Form, INotifyPropertyChanged
     /// <summary>
     /// Handles log events from the organize service and appends messages to the log textbox.
     /// </summary>
-    private void OrganizeService_LogEvent(object sender, CustomEventArgs.LogEventArgs e)
+    private void OrganizeService_LogEvent(object sender, LogEventArgs e)
     {
         LogsTextBox.BeginInvoke(new Action(() =>
         {

@@ -1,4 +1,4 @@
-﻿namespace FiscOrganizer.CustomEventArgs;
+﻿namespace FiscOrganizer.Core.CustomEventArgs;
 
 public class LogEventArgs : EventArgs
 {

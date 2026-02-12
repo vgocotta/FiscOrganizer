@@ -1,7 +1,7 @@
-﻿using FiscOrganizer.Models;
+﻿using FiscOrganizer.Core.Models;
 using System.Diagnostics.CodeAnalysis;
 
-namespace FiscOrganizer.Comparers;
+namespace FiscOrganizer.Core.Comparers;
 
 public sealed class ProcessedFileModelCnpjBaseComparer : IEqualityComparer<ProcessedFileModel>
 {

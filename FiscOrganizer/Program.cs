@@ -1,6 +1,6 @@
 using Dark.Net;
-using FiscOrganizer.Contracts;
-using FiscOrganizer.Services;
+using FiscOrganizer.Core.Contracts;
+using FiscOrganizer.Core.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace FiscOrganizer;

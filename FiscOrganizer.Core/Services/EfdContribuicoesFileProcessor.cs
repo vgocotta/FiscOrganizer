@@ -1,11 +1,11 @@
-﻿using FiscOrganizer.Contracts;
-using FiscOrganizer.Enums;
-using FiscOrganizer.Extentions;
-using FiscOrganizer.Models;
+﻿using FiscOrganizer.Core.Contracts;
+using FiscOrganizer.Core.Enums;
+using FiscOrganizer.Core.Extentions;
+using FiscOrganizer.Core.Models;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace FiscOrganizer.Services;
+namespace FiscOrganizer.Core.Services;
 
 public sealed class EfdContribuicoesFileProcessor : IFileProcessor
 {

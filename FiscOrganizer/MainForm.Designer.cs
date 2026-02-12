@@ -114,7 +114,7 @@
             // 
             // fileItemBindingSource
             // 
-            fileItemBindingSource.DataSource = typeof(Models.FileItem);
+            fileItemBindingSource.DataSource = typeof(Core.Models.FileItem);
             // 
             // SelectFilesPanel
             // 

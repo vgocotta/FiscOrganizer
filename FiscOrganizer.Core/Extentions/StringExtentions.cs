@@ -1,8 +1,8 @@
-﻿using FiscOrganizer.Utils;
+﻿using FiscOrganizer.Core.Utils;
 using System.Globalization;
 using System.Text;
 
-namespace FiscOrganizer.Extentions;
+namespace FiscOrganizer.Core.Extentions;
 
 public static class StringExtentions
 {
@@ -49,7 +49,7 @@ public static class StringExtentions
 
     public static int GetSpedFieldInt(this string spedLine, int index)
     {
-        string field = GetSpedField(spedLine, index);
+        string field = spedLine.GetSpedField(index);
         if (string.IsNullOrEmpty(field) || !int.TryParse(field, out int result))
         {
             return -1;
@@ -58,7 +58,7 @@ public static class StringExtentions
     }
     public static DateTime GetSpedFieldDateTime(this string spedLine, int index)
     {
-        string field = GetSpedField(spedLine, index);
+        string field = spedLine.GetSpedField(index);
         if (!DateTime.TryParseExact(field, "ddMMyyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime dataConvertida)) throw new ArgumentException($"A data estava num formato inválido: {field}");
         return dataConvertida;
     }
