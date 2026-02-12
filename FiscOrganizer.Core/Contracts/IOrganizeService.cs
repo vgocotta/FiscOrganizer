@@ -1,7 +1,7 @@
-﻿using FiscOrganizer.CustomEventArgs;
-using FiscOrganizer.Models;
+﻿using FiscOrganizer.Core.CustomEventArgs;
+using FiscOrganizer.Core.Models;
 
-namespace FiscOrganizer.Contracts;
+namespace FiscOrganizer.Core.Contracts;
 
 public interface IOrganizeService
 {

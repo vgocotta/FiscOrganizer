@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace FiscOrganizer.Enums;
+namespace FiscOrganizer.Core.Enums;
 
 public enum SpedFileType
 {

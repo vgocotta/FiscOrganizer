@@ -39,4 +39,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FiscOrganizer.Core\FiscOrganizer.Core.csproj" />
+  </ItemGroup>
+
 </Project>

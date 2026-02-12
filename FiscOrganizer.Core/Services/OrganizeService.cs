@@ -1,13 +1,13 @@
-﻿using FiscOrganizer.Comparers;
-using FiscOrganizer.Contracts;
-using FiscOrganizer.CustomEventArgs;
-using FiscOrganizer.Enums;
-using FiscOrganizer.Extentions;
-using FiscOrganizer.Models;
+﻿using FiscOrganizer.Core.Comparers;
+using FiscOrganizer.Core.Contracts;
+using FiscOrganizer.Core.CustomEventArgs;
+using FiscOrganizer.Core.Enums;
+using FiscOrganizer.Core.Extentions;
+using FiscOrganizer.Core.Models;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace FiscOrganizer.Services;
+namespace FiscOrganizer.Core.Services;
 
 /// <summary>
 /// Provides services for organizing SPED files, including moving, renaming, and logging file operations.
