@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiscOrganizer", "FiscOrgani
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiscOrganizer.Core", "FiscOrganizer.Core\FiscOrganizer.Core.csproj", "{392266ED-3916-4B4F-98BC-C3D866509963}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiscOrganizer.Tests", "FiscOrganizer.Tests\FiscOrganizer.Tests.csproj", "{1343D1E1-8ABC-4310-A081-57786C94682B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{392266ED-3916-4B4F-98BC-C3D866509963}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{392266ED-3916-4B4F-98BC-C3D866509963}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{392266ED-3916-4B4F-98BC-C3D866509963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1343D1E1-8ABC-4310-A081-57786C94682B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1343D1E1-8ABC-4310-A081-57786C94682B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1343D1E1-8ABC-4310-A081-57786C94682B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1343D1E1-8ABC-4310-A081-57786C94682B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
