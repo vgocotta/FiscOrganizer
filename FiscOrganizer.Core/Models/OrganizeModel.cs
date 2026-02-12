@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace FiscOrganizer.Models;
+namespace FiscOrganizer.Core.Models;
 
 public class OrganizeModel : INotifyPropertyChanged
 {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Reflection;
 
-namespace FiscOrganizer.Extentions;
+namespace FiscOrganizer.Core.Extentions;
 
 public static class EnumExtentions
 {

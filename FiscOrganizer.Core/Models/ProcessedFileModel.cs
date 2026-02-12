@@ -1,7 +1,6 @@
-﻿using FiscOrganizer.Enums;
-using System.Text;
+﻿using FiscOrganizer.Core.Enums;
 
-namespace FiscOrganizer.Models;
+namespace FiscOrganizer.Core.Models;
 
 public class ProcessedFileModel
 {

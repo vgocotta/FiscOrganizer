@@ -1,6 +1,6 @@
-﻿using FiscOrganizer.Models;
+﻿using FiscOrganizer.Core.Models;
 
-namespace FiscOrganizer.Contracts;
+namespace FiscOrganizer.Core.Contracts;
 
 public interface IFileProcessor
 {
